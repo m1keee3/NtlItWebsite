@@ -369,24 +369,6 @@ body {
   height: auto;
 }
 
-/* ===================== CLIENTS ===================== */
-.clients {
-  padding: 64px 200px;
-  min-height: 510px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 32px;
-  background: linear-gradient(180deg, var(--light-1) 0%, var(--light-2) 100%);
-}
-
-.clients__content { display: flex; flex-direction: column; gap: 8px; }
-
-.clients__placeholder {
-  font-size: 32px;
-  font-weight: 800;
-  color: var(--text-dark);
-}
 
 /* ===================== CONTACTS ===================== */
 .contacts {
@@ -489,4 +471,48 @@ body {
   font-weight: 400;
   color: #fff;
   white-space: nowrap;
+}
+
+/* ===================== FORM — общие состояния ===================== */
+
+.form-field--invalid {
+  outline: 2px solid var(--red-light) !important;
+  outline-offset: -2px;
+}
+
+.form-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 24px 16px;
+  min-height: 220px;
+  text-align: center;
+}
+
+.form-success svg {
+  flex-shrink: 0;
+}
+
+.form-success__ring,
+.form-success__check {
+  transition: stroke-dashoffset 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-success__check {
+  transition-delay: 0.35s;
+}
+
+.form-success__title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.form-success__text {
+  font-size: 15px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.5;
 }
