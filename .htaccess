@@ -1,0 +1,13 @@
+Options -Indexes
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+
+RewriteRule ^$              index.html        [L]
+RewriteRule ^about$         about.html        [L]
+RewriteRule ^services$      services.html     [L]
+RewriteRule ^solutions$     solutions.html    [L]
+RewriteRule ^pricing$       pricing.html      [L]
+RewriteRule ^contacts$      contacts.html     [L]
+RewriteRule ^accreditation$ accreditation.html [L]
